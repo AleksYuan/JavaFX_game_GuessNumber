@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0"
+      prefWidth="378.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:id="imageView"
+      fx:controller="sample.WarningController">
+   <children>
+      <ImageView
+              pickOnBounds="true"
+              preserveRatio="true"
+      >
+         <image>
+            <Image url="/layout/img/warning.png" backgroundLoading="true"
+            />
+         </image>
+      </ImageView>
+      <Label layoutX="45.0" layoutY="91.0" prefHeight="47.0" prefWidth="289.0"
+             text="Поздравляю!! Ты ввел какие то странные данные!! У тебя минус одна попытка"
+             textAlignment="CENTER" textFill="#f8efef" wrapText="true" />
+      <Button layoutX="167.0" layoutY="171.0" mnemonicParsing="false" text="Окей" fx:id="closeButton" onAction="#clickOk"/>
+   </children>
+</Pane>

@@ -1,0 +1,9 @@
+.loose-button {
+-fx-background-image: url("../../img/loose.jpg");
+-fx-background-size: cover;
+}
+
+.youLoose {
+-fx-text-fill: #fffff0;
+
+}

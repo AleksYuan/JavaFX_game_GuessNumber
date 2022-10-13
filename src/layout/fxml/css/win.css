@@ -1,0 +1,7 @@
+.win-button {
+-fx-background-image: url("../../img/win.jpg");
+-fx-background-size: cover;
+}
+
+.buttonWin {
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextArea?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+         prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="sample.Controller">
+  <tabs>
+    <Tab closable="false" text="Игра">
+      <content>
+        <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+
+               <children>
+                  <TextField fx:id="data" alignment="CENTER_LEFT" layoutX="200.0" layoutY="240.0" prefHeight="30.0"
+                             prefWidth="350.0"
+                  promptText="Введите число" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="100.0" layoutY="159.0"
+                         prefHeight="50.0" prefWidth="600.0" text="УГАДАЙ ЧИСЛО" textAlignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                   <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="100.0" layoutY="190.0"
+                          prefHeight="50.0" prefWidth="600.0" text="из диапазона от 0 до 10 включительно" textAlignment="CENTER"
+                          fx:id="rangeNumber" >
+                       <font>
+                           <Font size="20" />
+                       </font>
+                   </Label>
+                  <Button alignment="CENTER" layoutX="560.0" layoutY="240.0" mnemonicParsing="false" prefHeight="30.0"
+                          prefWidth="40.0" text="ОК" onAction="#OK"/>
+                  <Label layoutX="14.0" layoutY="540.0" prefHeight="17.0" prefWidth="271.0" fx:id="labelLive"
+                  textAlignment="LEFT" />
+               </children></AnchorPane>
+
+      </content>
+    </Tab>
+    <Tab closable="false" text="Правила игры">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="rule" wrapText="true" layoutX="39.0" layoutY="34.0" prefHeight="503.0"
+                            prefWidth="537.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab closable="false" text="Настройки">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="41.0" layoutY="31.0" prefHeight="27.0" prefWidth="260.0"
+                         text="Задайте диапазон случайных чисел ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label  layoutX="41.0" layoutY="71.0" prefHeight="27.0" prefWidth="174.0"
+                          text="Минимальное значение">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="391.0" layoutY="71.0" prefHeight="27.0" prefWidth="174.0"
+                         text="Максимальное значение">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="minValue" layoutX="211.0" layoutY="71.0" text="0" />
+                  <TextField fx:id="maxValue" layoutX="571.0" layoutY="71.0" text="10" />
+                  <Line endX="600.0" layoutX="130.0" layoutY="110.0" startX="-100.0" strokeDashOffset="1.0" strokeWidth="2.0" />
+                  <Label layoutX="43.0" layoutY="139.0" prefHeight="27.0" prefWidth="256.0" text="Выберите уровень сложности игры ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ToggleButton fx:id="easy" layoutX="43.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0"
+                                prefWidth="150.0" text="Легко" onAction="#setEasy"/>
+                  <ToggleButton fx:id="average" layoutX="224.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0"
+                                prefWidth="150.0" text="Средне" onAction="#setAverage"/>
+                  <ToggleButton fx:id="hard" layoutX="400.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0"
+                                prefWidth="150.0" text="Тяжело" onAction="#setHard" />
+                  <ToggleButton fx:id="genius" layoutX="570.0" layoutY="183.0" mnemonicParsing="false" prefHeight="25.0"
+                                prefWidth="150.0" text="Гений" onAction="#setGenius" />
+                  <Line endX="600.0" layoutX="130.0" layoutY="268.0" startX="-100.0" strokeDashOffset="1.0"
+                        strokeWidth="2.0" />
+                  <Label fx:id="labelLiveProperties" layoutX="43.0" layoutY="226.0" prefHeight="27.0" prefWidth="678.0"
+                         text="10 - попыток для определения загаданного числа">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="605.0" layoutY="508.0"
+                          mnemonicParsing="false" prefHeight="37.0" prefWidth="152.0"
+                          text="Принять настройки" textAlignment="CENTER" onAction="#okSettings"/>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab closable="false" text="Инфо">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="info" wrapText="true" layoutX="23.0" layoutY="26.0" prefHeight="511.0"
+                         prefWidth="571.0" text="Тут описана вся информация о компании или еще что то" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Профиль">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" prefHeight="30.0" prefWidth="130.0" text="Игрок" />
+                  <Label layoutX="20.0" layoutY="70.0" prefHeight="30.0" prefWidth="130.0" text="Уровень" />
+                  <Label layoutX="20.0" layoutY="120.0" prefHeight="30.0" prefWidth="130.0" text="Статистика" />
+                  <TextField layoutX="138.0" layoutY="23.0" />
+                  <TextField layoutX="138.0" layoutY="73.0" />
+                  <TextField layoutX="138.0" layoutY="123.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
